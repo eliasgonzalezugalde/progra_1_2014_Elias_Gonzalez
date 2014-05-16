@@ -51,8 +51,10 @@ public class Game extends JPanel {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //suavisar bola
 				RenderingHints.VALUE_ANTIALIAS_ON); //suavisar bola
+                //g.setColor(Color.ORANGE);
+                g.setColor( new Color(0x18, 0x74, 0xCD) );
                 ball.paint(g2d);
-		racquet.paint(g2d);
+		racquet.paint(g2d); 
 	}
 
 	public static void main(String[] args) throws InterruptedException {

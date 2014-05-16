@@ -24,9 +24,9 @@ public class Racquet {
 			x = x + xa;
 	}
 
-	public void paint(Graphics2D g) {
-		g.fillRect(x, 330, 60, 10); //rectangulo lleno, solo se mueve en el eje X, 60 de ancho, 10 de alto
-                g.setColor(Color.GRAY);
+	public void paint(Graphics2D gr) {
+		gr.fillRect(x, 330, 60, 10); //rectangulo lleno, solo se mueve en el eje X, 60 de ancho, 10 de alto
+                gr.setColor( new Color(0x00, 0x00, 0x00) );
 	}
 
 	public void keyReleased(KeyEvent e) {
