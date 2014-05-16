@@ -6,6 +6,7 @@
 
 package game;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 
@@ -25,6 +26,7 @@ public class Racquet {
 
 	public void paint(Graphics2D g) {
 		g.fillRect(x, 330, 60, 10); //rectangulo lleno, solo se mueve en el eje X, 60 de ancho, 10 de alto
+                g.setColor(Color.GRAY);
 	}
 
 	public void keyReleased(KeyEvent e) {

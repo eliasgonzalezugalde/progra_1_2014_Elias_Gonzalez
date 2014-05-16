@@ -6,6 +6,7 @@
 
 package game;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 
 public class Ball {
@@ -34,6 +35,7 @@ public class Ball {
 	}
 
 	public void paint(Graphics2D g) {
-		g.fillOval(x, y, 30, 30);
+                g.fillOval(x, y, 30, 30);
+                g.setColor(Color.MAGENTA);
 	}
 }

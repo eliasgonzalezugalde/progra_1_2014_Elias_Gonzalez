@@ -6,6 +6,7 @@
 
 package game;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -50,7 +51,7 @@ public class Game extends JPanel {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //suavisar bola
 				RenderingHints.VALUE_ANTIALIAS_ON); //suavisar bola
-		ball.paint(g2d);
+                ball.paint(g2d);
 		racquet.paint(g2d);
 	}
 
