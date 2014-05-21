@@ -52,7 +52,7 @@ public class Game extends JPanel {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //suavisar bola
 				RenderingHints.VALUE_ANTIALIAS_ON); //suavisar bola
                 //g.setColor(Color.ORANGE);
-                g.setColor( new Color(0x18, 0x74, 0xCD) );
+                g.setColor( new Color(0x33, 0x33, 0x33) );
                 ball.paint(g2d);
 		racquet.paint(g2d); 
 	}
@@ -61,7 +61,7 @@ public class Game extends JPanel {
 		JFrame frame = new JFrame("Mini Tennis"); //titulo de la ventana
 		Game game = new Game();
 		frame.add(game);
-		frame.setSize(300, 400); //tamaño de la ventana
+		frame.setSize(800, 400); //tamaño de la ventana
 		frame.setVisible(true); //si esto no esta true, no aparece la ventana
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //para que aparezca la X de la ventana
 		
