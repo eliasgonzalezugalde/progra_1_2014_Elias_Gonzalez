@@ -21,8 +21,7 @@ public class PracticaSwitch {
         int mes1=0;
         
         //variables ejercicio 2
-        int numeroEntero=0, ultimoNumeroComodin=0, numeroEnteroRespuesta=0;
-        char ultimoNumero;
+        int numeroSwitch2;
         
         //variables ejercicio 3
         char letra;
@@ -39,28 +38,36 @@ public class PracticaSwitch {
         //variables ejercicio 7
         int diaMes = 0;
         
+        //variables ejercicio 8
+        String dia1;
+        int diaFechaActual;
+        
         //scanner
         Scanner teclado = new Scanner(System.in);
         
         //Ejercicio1////////////////////////////////////////
   
-        System.out.println("Digite un número");
+        System.out.println("Digite un número entre 1 - 12");
         mes1= Integer.parseInt(teclado.nextLine());
         
         eje1 eeje1 = new eje1();
-        System.out.print("Este número corresponde al mes de: ");
         eeje1.mes(mes1);
         
         //Ejercicio2////////////////////////////////////////
+        eje2 eeje2 = new eje2();
+        System.out.println("Digite un número");
+        numeroSwitch2 = Integer.parseInt(teclado.nextLine());
         
-//        System.out.println("Digite un número entero");
-//        numeroEntero= Integer.parseInt(teclado.nextLine());
-//        System.out.println("Vuelva a digitar el número");
-//        ultimoNumero=teclado.nextLine().charAt(0);
-// 
-//        
-//        eje2 eeje2 = new eje2();
-//        System.out.println(eeje2.operaciones(ultimoNumero, numeroEntero));
+        switch(numeroSwitch2) {
+            case 2: case 5: case 8:
+                System.out.println("El cuadrado de " + numeroSwitch2 + " es " + eeje2.pow(numeroSwitch2));
+                break;
+            case 4: case 7: case 9:
+                System.out.println("La multiplicaciÃ³n de " + numeroSwitch2 + " por cinco es " + eeje2.mult(numeroSwitch2));
+                break;
+            default:
+                System.out.println("No se hizo nada. " + numeroSwitch2 + ".");
+        }
         
         //Ejercicio3////////////////////////////////////////
         
@@ -111,8 +118,15 @@ public class PracticaSwitch {
         eje7 eeje7 = new eje7();
         eeje7.mes(diaMes);
         
-        //Ejercicio7////////////////////////////////////////
-        System.out.println("Digite el día de la semana que fue primero del mes actual .");
+        //Ejercicio8////////////////////////////////////////
+        System.out.println("Digite el día de la semana que fue primero del mes actual.");
+        dia1 = teclado.nextLine();
         
+        System.out.println("Digite el día de la fecha actual. (en números)");
+        diaFechaActual = Integer.parseInt(teclado.nextLine());
+        
+        eje8 eeje8 = new eje8();
+        eeje8.diaUno(dia1, diaFechaActual);
+                    
     }
 }
