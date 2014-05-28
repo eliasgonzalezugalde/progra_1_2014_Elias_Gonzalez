@@ -36,7 +36,11 @@ public class eje7 {
             case 6:
                 System.out.println("Sábado.");
                 break;
+<<<<<<< HEAD
             case 0:
+=======
+            case 7:
+>>>>>>> 98819e51697fadc063781dd869dce3cc7c3a45e4
                 System.out.println("Domingo.");
                 break;
         }
