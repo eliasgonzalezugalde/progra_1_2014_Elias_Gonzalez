@@ -86,9 +86,7 @@ public class eje8 {
                 System.out.println("Hoy es domingo.");
                 break;
         }
-        
-        
-        //tengo q restarle el NUMERO este del switch al numero de dias de cada mes, y restarle el numero de dias a diferencia con el lunes, si es jueves 27-4, a esto % 7
+
     }
     
 }
