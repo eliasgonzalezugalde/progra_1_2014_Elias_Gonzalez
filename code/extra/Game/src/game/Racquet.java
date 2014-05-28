@@ -8,25 +8,28 @@ package game;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 public class Racquet {
+	private static final int Y = 330;
+	private static final int WITH = 60;
+	private static final int HEIGHT = 10;
 	int x = 0;
-	int xa = 0; //velocidad del rectangulo
+	int xa = 0;
 	private Game game;
 
 	public Racquet(Game game) {
-		this.game= game;
+		this.game = game;
 	}
 
 	public void move() {
-		if (x + xa > 0 && x + xa < game.getWidth()-60) //esto para evitar que la raqueta salga de la pantalla
+		if (x + xa > 0 && x + xa < game.getWidth() - WITH)
 			x = x + xa;
 	}
 
-	public void paint(Graphics2D gr) {
-		gr.fillRect(x, 330, 60, 10); //rectangulo lleno, solo se mueve en el eje X, 60 de ancho, 10 de alto
-                gr.setColor( new Color(0x00, 0x00, 0x00) );
+	public void paint(Graphics2D g) {
+		g.fillRect(x, Y, WITH, HEIGHT);
 	}
 
 	public void keyReleased(KeyEvent e) {
@@ -34,9 +37,17 @@ public class Racquet {
 	}
 
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_LEFT) //si la tecla presionada es left mover la posición
-			xa = -1;
+		if (e.getKeyCode() == KeyEvent.VK_LEFT)
+			xa = -game.speed;
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT)
-			xa = 1;
+			xa = game.speed;
+	}
+
+	public Rectangle getBounds() {
+		return new Rectangle(x, Y, WITH, HEIGHT);
+	}
+
+	public int getTopY() {
+		return Y;
 	}
 }
