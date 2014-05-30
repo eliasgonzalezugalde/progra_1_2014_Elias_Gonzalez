@@ -40,5 +40,54 @@ public class ejercicio2 {
         this.cadena = cadena;
     }
     
+    public String guion(){
+        String retorno="";
+        
+        for(int i=0; i < getCadena().length(); i++){
+            if(getCadena().length()-1==i){
+                retorno+=getCadena().charAt(i);
+            } else {
+                retorno+=getCadena().charAt(i)+"-";
+            }
+        }
+        return retorno;
+    }
     
-}
+    public int Vocales() 
+    {
+        int cantidadVocales = 0;
+        for (int i = 0; i < getCadena().length(); i++) {
+
+            if ((getCadena().charAt(i) == 'a')
+                    || (getCadena().charAt(i) == 'A')
+                    || (getCadena().charAt(i) == 'e')
+                    || (getCadena().charAt(i) == 'E')
+                    || (getCadena().charAt(i) == 'i')
+                    || (getCadena().charAt(i) == 'I')
+                    || (getCadena().charAt(i) == 'o')
+                    || (getCadena().charAt(i) == 'O')
+                    || (getCadena().charAt(i) == 'u')
+                    || (getCadena().charAt(i) == 'U')) {
+                cantidadVocales++;
+            }
+        }
+        return cantidadVocales;
+    }
+        
+        public boolean palindromo(){
+            String palabraAlRevez="";
+            for (int i = getCadena().length()-1; i >= 0; i--) {
+                palabraAlRevez+=getCadena().charAt(i);
+            }
+            
+            if(getCadena().equals(palabraAlRevez))
+                return true;
+            else
+                return false;
+                
+        }
+        
+    }
+    
+    
+
