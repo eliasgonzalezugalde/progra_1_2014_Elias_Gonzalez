@@ -29,8 +29,9 @@ public class Clase8 {
         System.out.println("Palindromo.");
         System.out.println(v.palindromo1());
         
-        System.out.println("Digite un texto para buscar las palabras repetidas.");
+        System.out.println("Digite un texto para buscar la cadena que se digitó anteriormente. (Será marcada por un -)");
         v.setTexto(teclado.nextLine());
+        System.out.println(v.buscaPalabra());
         
     }
 }
